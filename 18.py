@@ -39,7 +39,7 @@ def main():
         except ValueError:
             print("❌ Invalid input. Please enter a number.")
 
-    numbers = [random.randint(1, 100) for _ in range(count)]
+    numbers = [random.randint(1, 100000) for _ in range(count)]
 
     print("\nGenerated Numbers:")
     print(numbers)
