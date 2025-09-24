@@ -1,21 +1,25 @@
 def diagonal_pattern(n):
-    reveres = n / 2
-    for i in range(1, n + 1):
-        if i <= reveres:
-            print("*" * i)
-        else:
-            print("*" * (i - 1))
+    for i in range(1, n // 2 + 1):
+        print("*" * i)
+    for i in range(n // 2 - 1, 0, -1):
+        print("*" * i)
 
 
 def main():
     while True:
         try:
-            num = int(input("Pls Enter The Number :"))
+            num = int(input("Pls Enter The Number (Even Recommended) : "))
         except ValueError:
-            print("Invalid Input..")
+            print("Invalid Input. Please enter an integer.")
             continue
+
         diagonal_pattern(num)
-        print("\n" + "-" * 50)
+        print("\n" + "-" * 40)
+
+        q = input("Do you want to continue? (y/n): ")
+        if q.lower() != "y":
+            print("Exiting...")
+            break
 
 
 if __name__ == "__main__":
